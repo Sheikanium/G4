@@ -1,5 +1,7 @@
 #!/usr/bin/expect -f
 
+set timeout -1
+
 set username "user"
 set password "password"
 set hostname "ip"
