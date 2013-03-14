@@ -1,8 +1,8 @@
 #!/usr/bin/expect -f
 
-set username "sheik"
-set password "adsfdgfhg"
-set hostname "90.16.108.214"
+set username "user"
+set password "password"
+set hostname "ip"
 
 spawn ssh -l $username $hostname
 expect "continue ?"
