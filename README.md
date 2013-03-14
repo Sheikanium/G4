@@ -2,7 +2,7 @@
 README.md	REPOSITORY DESCRIPTION
 ::::::::::::::::::::::::::::::::::::::::::::
 
-G4 is a netkit virtual machine that allow us
+G4 is a netkit virtual machine that allows us
 to mount services and make tests
 
 This repository stores all files and documentations
