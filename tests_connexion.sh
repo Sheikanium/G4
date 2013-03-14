@@ -1,7 +1,5 @@
 #!/usr/bin/expect -f
 
-set timeout -1
-
 set username "user"
 set password "password"
 set hostname "ip"
@@ -14,3 +12,5 @@ expect "assword"
 expect "~$"
 	send -- "mkdir camarche\r"
 	send -- "exit\r"
+
+wait
