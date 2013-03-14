@@ -1,0 +1,35 @@
+Se placer dans le répertoire où on veut placer le répertoire
+
+git init
+
+nano .git/config
+	//url du github
+	url = git@github.com:Sheikanium/G4.git 
+
+git config --global user.name "Pseudo"
+git config --global user.email "adresse@host.com"
+
+//git checkout ?? 
+git pull origin master
+
+git add fichier
+
+git commit -m "Commentaire"
+
+git push origin master
+
+=====================================================================
+
+Erreur :
+
+No publickey
+
+	ssh -vT git@github.com
+
+	cd ~/.ssh/
+	ssh-keygen -t rsa -C "adresse@mail.com"
+
+	Copier le contenu de id_rsa.pub
+	Coller dans github.com/settings/ssh => add SSH key
+
+
