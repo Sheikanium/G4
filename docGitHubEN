@@ -1,4 +1,4 @@
-Se placer dans le répertoire où on veut placer le répertoire
+Go into folder where you want to put your github
 
 git init
 
@@ -14,13 +14,13 @@ git pull origin master
 
 git add fichier
 
-git commit -m "Commentaire"
+git commit -m "Commentary"
 
 git push origin master
 
 =====================================================================
 
-Erreur :
+Error :
 
 No publickey
 
@@ -29,7 +29,7 @@ No publickey
 	cd ~/.ssh/
 	ssh-keygen -t rsa -C "adresse@mail.com"
 
-	Copier le contenu de id_rsa.pub
-	Coller dans github.com/settings/ssh => add SSH key
+	Copy id_rsa.pub content
+	Past it into github.com/settings/ssh => add SSH key
 
 
