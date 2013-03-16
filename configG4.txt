@@ -1,0 +1,25 @@
+________________________________________________________
+DOCUMENT DE CONFIGURATION GENERALE DE G4
+________________________________________________________
+
+1. Creation du lab
+		Dossier G4 
+		lab.conf
+		G4.startup
+		Copie du fichier sshd_config dans /etc/ssh (modification du port)
+
+2. Configuration du lab
+		Changement du password
+		Changement source stable /etc/apt/sources.list
+		Commande : apt-get install debian-archive-keyring
+		Update 
+
+3. Installation de logiciels
+		Apache
+		MySQL
+		PhpMyAdmin
+
+4. Configuration de services
+		DNS
+		Supervision (ping + cron)
+		Munin
