@@ -1,0 +1,2 @@
+ifconfig eth0 172.0.0.10
+/etc/init.d/ssh start
