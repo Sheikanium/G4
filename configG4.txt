@@ -9,7 +9,6 @@ ________________________________________________________
 		Copy of file "sshd_config" in /etc/ssh (with port modification)
 
 2. Setting up the lab
-		Change password
 		Switch to stable source /etc/apt/sources.list
 		Command : apt-get install debian-archive-keyring
 		Update 
