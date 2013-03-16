@@ -30,6 +30,6 @@ No publickey
 	ssh-keygen -t rsa -C "adresse@mail.com"
 
 	Copy id_rsa.pub content
-	Past it into github.com/settings/ssh => add SSH key
+	Paste it into github.com/settings/ssh => add SSH key
 
 
