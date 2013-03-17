@@ -1,2 +1,2 @@
-ifconfig eth0 172.0.0.254
+ifconfig eth1 172.0.0.254
 /etc/init.d/ssh start
