@@ -26,6 +26,9 @@ mkdir -p G4/var
 cp G0/etc/ssh/sshd_config G4/etc/ssh
 sed -i "s/Port 1022/Port 1422/g" G4/etc/ssh/sshd_config
 
+#Set up DNS
+echo 'nameserver 8.8.8.8' >> G4/etc/resolv.conf
+
 #Start the lab
 lstart G0 G4
 
