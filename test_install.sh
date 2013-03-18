@@ -3,7 +3,7 @@
 INSTALLER_LOG=/var/log/my-installer.log
 
 installnoninteractive(){
-  sudo bash -c "DEBIAN_FRONTEND=noninteractive aptitude install -q -y $* >> $IN$
+  bash -c "DEBIAN_FRONTEND=noninteractive aptitude install -q -y $* >> $IN$
 }
 
 #install needed software
@@ -22,7 +22,11 @@ a2enmod userdir
 sed -i "6s/Allow.*/AllowOverride\ All/g" /etc/apache2/mods-available/userdir.conf
 
 #Php5 configuration
-todo
+line=11
+while test $line != 16
+        do sed -i "$line s/^/\#/g" /etc/apache2/mods-available/php5.conf
+        line=$(($line + 1))
+done
 
 #Port forwading on 1480
 sed -i "1s/80/1480/g" /etc/apache2/sites-available/default

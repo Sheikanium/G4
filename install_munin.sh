@@ -13,16 +13,17 @@ installnoninteractive munin
 installnoninteractive munin-node
 
 #include default dir for website
-#do for
-$line=8
-for $line do 
-sed -i "8s/\#//g" /etc/munin/munin.conf
-#until 11(included)
+line=8
+
+while test "$line" != 12
+        do sed -i "$line s/\#/ /g" /etc/munin/munin.conf
+        line=$(($line + 1))
+done
+
 
 sed-i "18s/\#//g" /etc/munin/munin.conf
 
 #Modify localhost
-#replace with a for ??
 sed -i "60s/^/\#/g"
 sed -i "61s/^/\#/g"
 sed -i "62s/^/\#/g"
