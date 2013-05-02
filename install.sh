@@ -1,15 +1,13 @@
 #!/bin/bash
 
-#INSTALLER_LOG=/var/log/log_install.log
-
 installnoninteractive(){
   bash -c "DEBIAN_FRONTEND=noninteractive aptitude install -q -y $*"
 }
 
 #install needed software
-DEBIAN_FRONTEND=noninteractive aptitude install -q -y apache2
-DEBIAN_FRONTEND=noninteractive aptitude install -q -y mysql-server
-DEBIAN_FRONTEND=noninteractive aptitude install -q -y php5
+installnoninteractive apache2
+installnoninteractive mysql-server
+installnoninteractive php5
 
 #Apache2 configuration
 
@@ -23,9 +21,10 @@ sed -i "6s/Allow.*/AllowOverride\ All/g" /etc/apache2/mods-available/userdir.con
 
 #Php5 configuration
 line=11
-while test $line != 15
-	do sed -i "$line s//\#/g" /etc/apache2/mods-avaible/php5.conf
-	line = $(($line + 1))
+while [ $line -le 15 ]
+do
+	sed -i "${line}s/^/#/" /etc/apache2/mods-available/php5.conf
+	(( line++ ))
 done
 
 #Port forwading on 1480
