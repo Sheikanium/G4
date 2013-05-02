@@ -8,9 +8,7 @@ INSTALLER_LOG=/var/log/my-installer.log
 
 apt-get update
 
-installnoninteractive(){
-   bash -c "DEBIAN_FRONTEND=noninteractive aptitude install -q -y $* >> $INSTALLER_LOG"
-}
+gpg --keyserver pgp.mit.edu --recv-keys AED4B06F473041FA
+gpg --armor --export AED4B06F473041FA| apt-key add -
 
-installnoninteractive debian-archive-keyring
 apt-get update
